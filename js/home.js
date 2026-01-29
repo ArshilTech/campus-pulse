@@ -86,8 +86,14 @@ function renderFeaturedClubs() {
     
     container.innerHTML = featuredClubs.map(club => `
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1 group text-center">
-            <div class="h-24 bg-gradient-to-br ${club.gradient} flex items-center justify-center">
-                <span class="text-4xl group-hover:scale-110 transition-transform duration-300">${club.logo}</span>
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1 group text-center">
+           <div class="h-32 relative h-24 w-full overflow-hidden">
+    <img 
+        src="${club.image}" 
+        alt="${club.name}"
+        class="w-full h-full object-cover"
+    />
+</div>
             </div>
             <div class="p-5">
                 <h3 class="text-lg font-bold text-gray-800 mb-1 group-hover:text-primary transition">${club.name}</h3>

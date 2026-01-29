@@ -143,6 +143,7 @@ const eventsData = [
     }
 ];
 
+
 const clubsData = [
     {
         id: 1,
@@ -154,6 +155,7 @@ const clubsData = [
         events: 15,
         founded: 2018,
         logo: "💻",
+        image:"assets/tech.png",
         gradient: "from-blue-500 to-indigo-600"
     },
     {
@@ -166,6 +168,7 @@ const clubsData = [
         events: 20,
         founded: 2015,
         logo: "🎨",
+        image:"assets/cultural.png",
         gradient: "from-pink-500 to-rose-600"
     },
     {
@@ -178,6 +181,7 @@ const clubsData = [
         events: 25,
         founded: 2010,
         logo: "⚽",
+        image:"assets/sports.png",
         gradient: "from-green-500 to-emerald-600"
     },
     {
@@ -190,6 +194,8 @@ const clubsData = [
         events: 12,
         founded: 2020,
         logo: "🎮",
+        
+        image:"assets/entre.png",
         gradient: "from-purple-500 to-violet-600"
     },
     {
@@ -202,6 +208,8 @@ const clubsData = [
         events: 10,
         founded: 2017,
         logo: "📸",
+        
+        image:"assets/photography.png",
         gradient: "from-amber-500 to-orange-600"
     },
     {
@@ -214,6 +222,8 @@ const clubsData = [
         events: 18,
         founded: 2016,
         logo: "🚀",
+        
+        image:"assets/entre.png",
         gradient: "from-red-500 to-rose-600"
     },
     {
@@ -226,6 +236,8 @@ const clubsData = [
         events: 14,
         founded: 2014,
         logo: "🎵",
+        
+        image:"assets/music.jpg",
         gradient: "from-cyan-500 to-blue-600"
     },
     {
@@ -238,6 +250,8 @@ const clubsData = [
         events: 8,
         founded: 2019,
         logo: "💬",
+        
+        image:"assets/debate.png",
         gradient: "from-teal-500 to-emerald-600"
     },
     {
@@ -250,6 +264,8 @@ const clubsData = [
         events: 9,
         founded: 2018,
         logo: "🤖",
+        
+        image:"assets/robotics.png",
         gradient: "from-gray-600 to-slate-700"
     },
     {
@@ -262,6 +278,8 @@ const clubsData = [
         events: 11,
         founded: 2017,
         logo: "🌱",
+        
+        image:"assets/environmental.png",
         gradient: "from-lime-500 to-green-600"
     }
 ];
