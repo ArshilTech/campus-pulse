@@ -1,3 +1,7 @@
+if (!sessionStorage.getItem('demoLoaded')) {
+    localStorage.clear();     
+    sessionStorage.setItem('demoLoaded', 'true');
+}
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -21,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
    
     renderRecentRegistrations();
+    loadRegistrations();
+
 });
 
 
@@ -147,3 +153,54 @@ function renderRecentRegistrations() {
         `;
     }).join('');
 }
+function loadRegistrations() {
+    const container = document.getElementById('recent-registrations');
+    if (!container) return;
+
+    const registrations =
+        JSON.parse(localStorage.getItem('registrations')) || [];
+
+    if (registrations.length === 0) {
+        container.innerHTML = `<p class="text-gray-500 text-sm">No registrations yet.</p>`;
+        return;
+    }
+
+    container.innerHTML = registrations
+        .slice(-5)
+        .reverse()
+        .map(reg => `
+            <div class="flex items-center p-3 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-white font-semibold">
+                    ${reg.name[0]}
+                </div>
+                <div class="ml-3">
+                    <p class="font-medium">${reg.name}</p>
+                    <p class="text-sm text-gray-500">${reg.eventTitle}</p>
+                </div>
+            </div>
+        `)
+        .join('');
+}
+function downloadCSV() {
+    const registrations =
+        JSON.parse(localStorage.getItem('registrations')) || [];
+
+    if (registrations.length === 0) {
+        alert('No registrations to download');
+        return;
+    }
+
+    let csv = "Event,Name,Email,Student ID,Time\n";
+    registrations.forEach(r => {
+        csv += `"${r.eventTitle}","${r.name}","${r.email}","${r.studentId}","${r.timestamp}"\n`;
+    });
+
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'event_registrations.csv';
+    a.click();
+}
+

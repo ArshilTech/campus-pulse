@@ -1,5 +1,6 @@
 
 
+
 let currentEventId = null;
 
 
@@ -71,21 +72,34 @@ document.addEventListener('DOMContentLoaded', function() {
    
     if (registrationForm) {
         registrationForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            
-            const formData = new FormData(registrationForm);
-            
-            
-            console.log('Registration submitted for event ID:', currentEventId);
-            
-           
-            showSuccessMessage();
-            
-            
-            registrationForm.reset();
-            setTimeout(closeModal, 1500);
-        });
+    event.preventDefault();
+
+    const inputs = registrationForm.querySelectorAll('input');
+    const name = inputs[0].value.trim();
+    const email = inputs[1].value.trim();
+    const studentId = inputs[2].value.trim();
+
+    if (!name || !email || !studentId) return;
+
+    const registrations =
+        JSON.parse(localStorage.getItem('registrations')) || [];
+
+    registrations.push({
+        eventId: currentEventId,
+        eventTitle: document.getElementById('modal-event-name').innerText.replace("You're registering for: ", ""),
+        name,
+        email,
+        studentId,
+        timestamp: new Date().toLocaleString()
+    });
+
+    localStorage.setItem('registrations', JSON.stringify(registrations));
+
+    showSuccessMessage();
+    registrationForm.reset();
+    setTimeout(closeModal, 1500);
+});
+
     }
 });
 

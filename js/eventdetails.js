@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     const club = getClubById(event.clubId);
-    const upcoming = isUpcoming(event.date);
+    const upcoming = true; 
     const spotsLeft = event.capacity - event.registered;
     
     
