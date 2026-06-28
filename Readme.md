@@ -222,7 +222,7 @@ Contributions are welcome! Here's how to get involved:
 
 ## 👥 Team
 
-Built with ❤️ by **Team CODEVATIVE** during **CodeSprint**
+Built with ❤️ by **Team CODEVATIVE** during **CodeSprint Hackathon**
 
 | Name | Role |
 |------|------|
