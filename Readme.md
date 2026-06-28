@@ -226,7 +226,7 @@ Built with ❤️ by **Team CODEVATIVE** during **CodeSprint**
 
 | Name | Role |
 |------|------|
-| **Arshil Masood** | Developer |
+| **Arshil Masood** | Developer & Team Leader |
 | **Abdullah Ansari** | Developer |
 
 ---
