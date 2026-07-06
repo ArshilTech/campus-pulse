@@ -21,7 +21,7 @@
 
 ## 🎯 About
 
-**CampusPulse** is a modern, responsive web platform designed to be the central hub for campus life. It connects students with clubs, events, and communities — making it effortless to discover what's happening on campus, register for events, and find clubs that match your interests.
+**CampusPulse** is a modern, responsive web platform designed to be the central hub for campus life. It connects students with clubs, events, and communities - making it effortless to discover what's happening on campus, register for events, and find clubs that match your interests.
 
 Built as a fast, lightweight static site with no framework overhead, CampusPulse delivers a polished, app-like experience powered entirely by vanilla HTML, CSS, and JavaScript.
 
@@ -52,7 +52,7 @@ Built as a fast, lightweight static site with no framework overhead, CampusPulse
 - **CSV export** of all registration data for offline analysis
 
 ### 🎨 Design & UX
-- Fully **responsive** — optimized for desktop, tablet, and mobile
+- Fully **responsive** - optimized for desktop, tablet, and mobile
 - Sticky navigation with mobile hamburger menu
 - Indigo-to-violet gradient design system (`#6366f1` → `#8b5cf6`) with amber accent (`#f59e0b`)
 - Smooth hover transitions, scale effects, and shadow animations
@@ -82,7 +82,7 @@ Built as a fast, lightweight static site with no framework overhead, CampusPulse
 | **Logic** | Vanilla JavaScript (ES6+) |
 | **Data** | Client-side JSON data store + `localStorage` for registrations |
 | **Icons** | Inline SVGs + Emoji |
-| **Deployment** | Static files — deploy anywhere (GitHub Pages, Netlify, Vercel, etc.) |
+| **Deployment** | Static files - deploy anywhere (GitHub Pages, Netlify, Vercel, etc.) |
 
 **Zero build step. Zero dependencies. Just open and go.**
 
